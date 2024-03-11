@@ -472,8 +472,8 @@ require('lazy').setup({
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
     },
-    config = function()
-      -- Brief aside: **What is LSP?**
+    config = function(_, opts)
+      -- Brief Aside: **What is LSP?**
       --
       -- LSP is an initialism you've probably heard, but might not understand what it is.
       --
@@ -621,7 +621,7 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        eslint = {},
+        -- eslint = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -658,6 +658,8 @@ require('lazy').setup({
       --  You can press `g?` for help in this menu.
       require('mason').setup()
 
+      -- merge servers and custom servers
+      servers = vim.tbl_deep_extend('force', {}, servers, opts.servers or {})
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
