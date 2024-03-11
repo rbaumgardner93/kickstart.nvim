@@ -4,7 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
   'tpope/vim-vinegar',
-  'tpope/vim-fugitive',
   {
     'tpope/vim-fugitive',
     config = function()
