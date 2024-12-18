@@ -955,6 +955,7 @@ require('lazy').setup({
   -- you can continue same window with `<space>sr` which resumes last telescope search
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   { import = 'custom.plugins' },
+  { import = 'kickstart.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
