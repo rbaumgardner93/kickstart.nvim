@@ -5,6 +5,7 @@ return {
       servers = {
         eslint = {},
         pyright = {},
+        ts_ls = {},
       },
     },
   },
