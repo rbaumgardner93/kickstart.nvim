@@ -711,19 +711,16 @@ require('lazy').setup({
       -- other tools, you can run
       --    :Mason
       --
-<<<<<<< HEAD
       --  You can press `g?` for help in this menu.
       require('mason').setup()
 
       -- merge servers and custom servers
       servers = vim.tbl_deep_extend('force', {}, servers, opts.servers or {})
-=======
       -- You can press `g?` for help in this menu.
       --
       -- `mason` had to be setup earlier: to configure its options see the
       -- `dependencies` table for `nvim-lspconfig` above.
       --
->>>>>>> origin/master
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -926,15 +923,12 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-<<<<<<< HEAD
       vim.cmd.colorscheme 'cyberdream'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
       vim.cmd.hi 'ColorColumn guibg=#292e42'
-=======
       vim.cmd.colorscheme 'tokyonight-night'
->>>>>>> origin/master
     end,
   },
 
